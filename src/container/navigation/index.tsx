@@ -89,7 +89,7 @@ export const Navigation = () => {
                         color={"inherit"}
                         textTransform={"inherit"}
                     >
-                        Book a Session
+                        Email Us
                     </Typography>
                 </BaseButton>
             </Box>
