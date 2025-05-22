@@ -2,11 +2,15 @@ import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
 import { HeaderPropsType } from "../../type/container.type";
 import { HeaderWrapper } from "./styled";
 import { BaseButton } from "../../component/button/styled";
+import { useNavigate } from "react-router-dom";
 
 export const Header: React.FC<HeaderPropsType> = ({
     headerBg, minHeight, headerText, headerBody, callToAction
 }) => {
+
+    const navigate = useNavigate();
     const matches = useMediaQuery('(min-width:220px)');
+
     return (
         <HeaderWrapper
             minHeight={minHeight}
@@ -63,6 +67,9 @@ export const Header: React.FC<HeaderPropsType> = ({
                                 bgcolor="var(--light-color)"
                                 colour="var(--dark-color)"
                                 sx={{ minWidth: matches ? "210px" : "0px" }}
+                                onClick={() => {
+                                    // window.open("https://calendly.com/your-link", "_blank");
+                                }}
                             >
                                 <Typography
                                     variant={"button"}
@@ -73,7 +80,7 @@ export const Header: React.FC<HeaderPropsType> = ({
                                     color={"inherit"}
                                     textTransform={"inherit"}
                                 >
-                                    Talk to us
+                                    Book A Session
                                 </Typography>
                             </BaseButton>
                         </Box>
@@ -84,6 +91,7 @@ export const Header: React.FC<HeaderPropsType> = ({
                             <BaseButton
                                 variant={"contained"}
                                 sx={{ minWidth: matches ? "210px" : "0px" }}
+                                onClick={() => navigate("/work")}
                             >
                                 <Typography
                                     variant={"button"}
@@ -94,7 +102,7 @@ export const Header: React.FC<HeaderPropsType> = ({
                                     color={"inherit"}
                                     textTransform={"inherit"}
                                 >
-                                    More About Us
+                                    View Our Projects
                                 </Typography>
                             </BaseButton>
                         </Box>
