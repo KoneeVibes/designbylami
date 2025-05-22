@@ -1,5 +1,5 @@
 import { Stack, styled } from "@mui/material";
-import middlebg from "../../asset/start-planning-middlebg.svg";
+import middlebg from "../../asset/start-planning-middlebg.png";
 
 export const TestimonialWrapper = styled(Stack)(({ theme }) => {
     return {

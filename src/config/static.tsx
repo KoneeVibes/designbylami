@@ -1,15 +1,15 @@
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import RecentWorkI from "../asset/thumbnail.svg";
-import RecentWorkII from "../asset/thumbnail.svg";
-import RecentWorkIII from "../asset/thumbnail.svg";
-import WorkI from "../asset/work-thumbnail-one.svg";
-import WorkII from "../asset/work-thumbnail-two.svg";
-import WorkIII from "../asset/work-thumbnail-three.svg";
-import WorkIV from "../asset/work-thumbnail-four.svg";
-import WorkV from "../asset/work-thumbnail-five.svg";
-import WorkVI from "../asset/work-thumbnail-six.svg";
+import RecentWorkI from "../asset/thumbnail.png";
+import RecentWorkII from "../asset/thumbnail.png";
+import RecentWorkIII from "../asset/thumbnail.png";
+import WorkI from "../asset/work-thumbnail-one.png";
+import WorkII from "../asset/work-thumbnail-two.png";
+import WorkIII from "../asset/work-thumbnail-three.png";
+import WorkIV from "../asset/work-thumbnail-four.png";
+import WorkV from "../asset/work-thumbnail-five.png";
+import WorkVI from "../asset/work-thumbnail-six.png";
 import reviewerheadshot from "../asset/reviewer-one.svg";
 import { ClientLogoI, ClientLogoII, ClientLogoIII, ClientLogoIV, ClientLogoV } from '../asset';
 
