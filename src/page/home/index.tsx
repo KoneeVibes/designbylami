@@ -1,7 +1,7 @@
 import { Header } from "../../container/header";
 import { AppLayout } from "../../container/layout";
 import { HomeBodyWrapper } from "./styled";
-import homeheaderbg from "../../asset/home-header-bg.svg";
+import homeheaderbg from "../../asset/home-header-bg.png";
 import { StartPlanning } from "../../container/startplanning";
 import { Clients } from "../../container/clients";
 import { RecentWorks } from "../../container/recentworks";

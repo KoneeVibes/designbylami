@@ -1,8 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { StartPlanningWrapper } from "./styled";
-import lhs from "../../asset/start-planning-lhs.svg";
-import rhs from "../../asset/start-planning-rhs.svg";
-import middlebg from "../../asset/start-planning-middlebg.svg";
+import lhs from "../../asset/start-planning-lhs.png";
+import rhs from "../../asset/start-planning-rhs.png";
+import middlebg from "../../asset/start-planning-middlebg.png";
 
 export const StartPlanning = () => {
     return (

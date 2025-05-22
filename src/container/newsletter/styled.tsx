@@ -1,5 +1,5 @@
 import { Stack, styled } from "@mui/material";
-import newsletterBg from "../../asset/newsletter-bg.svg";
+import newsletterBg from "../../asset/newsletter-bg.png";
 
 export const NewsletterWrapper = styled(Stack)(({ theme }) => {
     return {

@@ -1,7 +1,7 @@
 import { Header } from "../../container/header";
 import { AppLayout } from "../../container/layout";
 import { WorkBodyWrapper } from "./styled";
-import workheaderbg from "../../asset/work-header-bg.svg";
+import workheaderbg from "../../asset/work-header-bg.png";
 import { Works } from "../../container/works";
 import { ContactBox } from "../../container/contactbox";
 
