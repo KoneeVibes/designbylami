@@ -1,15 +1,28 @@
 import { Box, Grid } from "@mui/material";
-import { works } from "../../config/static";
 import { WorksWrapper } from "./styled";
+import { useQuery } from "@tanstack/react-query";
+import { retrieveAllGalleryService } from "../../util/api/retrieveallgallery";
 
 export const Works = () => {
+    const API_KEY = process.env.REACT_APP_API_KEY || "";
+
+    const { data: gallery } = useQuery({
+        queryKey: ['gallery', API_KEY],
+        queryFn: async () => {
+            const response = await retrieveAllGalleryService(API_KEY);
+            console.log(response);
+            return response;
+        },
+        enabled: !!API_KEY,
+    });
+
     return (
         <WorksWrapper
             container
             rowSpacing={"calc(var(--flex-gap)/3)"}
             columnSpacing={"calc(var(--flex-gap)/6)"}
         >
-            {works.map((work: Record<string, any>, index) => {
+            {gallery?.map((work: Record<string, any>, index: number) => {
                 return (
                     <Grid
                         key={index}
@@ -20,8 +33,8 @@ export const Works = () => {
                             className="thumbnail-box"
                         >
                             <img
-                                src={work.thumbnail}
-                                alt="work-thumbnail"
+                                src={work?.url}
+                                alt={work?.title}
                             />
                         </Box>
                     </Grid>

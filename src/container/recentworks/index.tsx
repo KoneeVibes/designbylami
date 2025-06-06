@@ -1,10 +1,29 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { RecentWorksWrapper } from "./styled";
-import { recentWorks } from "../../config/static";
 import { BaseButton } from "../../component/button/styled";
 import { Arrow } from "../../asset";
+import { useQuery } from "@tanstack/react-query";
+import { retrieveAllGalleryService } from "../../util/api/retrieveallgallery";
+import { useNavigate } from "react-router-dom";
 
 export const RecentWorks = () => {
+    const API_KEY = process.env.REACT_APP_API_KEY || "";
+
+    const navigate = useNavigate();
+
+    const { data: gallery } = useQuery({
+        queryKey: ['gallery', API_KEY],
+        queryFn: async () => {
+            const response = await retrieveAllGalleryService(API_KEY);
+            return Array.isArray(response)
+                ? response
+                    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+                    .slice(0, 3)
+                : [];
+        },
+        enabled: !!API_KEY,
+    });
+
     return (
         <RecentWorksWrapper>
             <Box>
@@ -28,19 +47,19 @@ export const RecentWorks = () => {
                 alignItems={"center"}
                 justifyContent={"space-between"}
             >
-                {recentWorks.map((work: Record<string, any>, index) => {
+                {gallery?.map((work: Record<string, any>, index) => {
                     return (
                         <Grid
                             key={index}
-                            size={{ mobile: 12, tablet: (12 / Number(`${recentWorks.length}`)) }}
+                            size={{ mobile: 12, tablet: (12 / Number(`${gallery?.length}`)) }}
                         >
                             <Box
                                 component={"div"}
                                 className="thumbnail-box"
                             >
                                 <img
-                                    src={work.thumbnail}
-                                    alt="work-thumbnail"
+                                    src={work.url}
+                                    alt={work.title}
                                 />
                             </Box>
                         </Grid>
@@ -58,7 +77,7 @@ export const RecentWorks = () => {
                     padding="calc(var(--basic-padding)/4) 0"
                     sx={{ float: { tablet: "right" } }}
                     endIcon={<Arrow />}
-                    onClick={() => { }}
+                    onClick={() => navigate("/work")}
                 >
                     <Typography
                         variant={"button"}

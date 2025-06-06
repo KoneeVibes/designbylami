@@ -5,6 +5,9 @@ import App from './App';
 import { ThemeProvider } from '@mui/material';
 import { theme } from './theme';
 import { ContextProvider } from './context';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,8 +15,14 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ContextProvider>
-      <ThemeProvider theme={theme}>
-        <App />
+      <ThemeProvider
+        theme={theme}
+      >
+        <QueryClientProvider
+          client={queryClient}
+        >
+          <App />
+        </QueryClientProvider>
       </ThemeProvider>
     </ContextProvider>
   </React.StrictMode>

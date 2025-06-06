@@ -9,7 +9,7 @@ export const WorksWrapper = styled(Grid)(({ theme }) => {
             overflow: "hidden",
             "& img": {
                 width: "100%",
-                height: "auto"
+                height: "500px",
             }
         },
         [theme.breakpoints.up("tablet")]: {
