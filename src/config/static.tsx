@@ -1,15 +1,6 @@
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import RecentWorkI from "../asset/thumbnail.png";
-import RecentWorkII from "../asset/thumbnail.png";
-import RecentWorkIII from "../asset/thumbnail.png";
-import WorkI from "../asset/work-thumbnail-one.png";
-import WorkII from "../asset/work-thumbnail-two.png";
-import WorkIII from "../asset/work-thumbnail-three.png";
-import WorkIV from "../asset/work-thumbnail-four.png";
-import WorkV from "../asset/work-thumbnail-five.png";
-import WorkVI from "../asset/work-thumbnail-six.png";
 import reviewerheadshot from "../asset/reviewer-one.svg";
 import { ClientLogoI, ClientLogoII, ClientLogoIII, ClientLogoIV, ClientLogoV } from '../asset';
 
@@ -92,48 +83,6 @@ export const clientLogos = [
     {
         name: "Client Five",
         logo: <ClientLogoV />
-    },
-];
-
-export const recentWorks = [
-    {
-        name: "Work 1",
-        thumbnail: RecentWorkI
-    },
-    {
-        name: "Work 2",
-        thumbnail: RecentWorkII
-    },
-    {
-        name: "Work 3",
-        thumbnail: RecentWorkIII
-    },
-];
-
-export const works = [
-    {
-        name: "Work 1",
-        thumbnail: WorkI
-    },
-    {
-        name: "Work 2",
-        thumbnail: WorkII
-    },
-    {
-        name: "Work 3",
-        thumbnail: WorkIII
-    },
-    {
-        name: "Work 4",
-        thumbnail: WorkIV
-    },
-    {
-        name: "Work 5",
-        thumbnail: WorkV
-    },
-    {
-        name: "Work 6",
-        thumbnail: WorkVI
     },
 ];
 
