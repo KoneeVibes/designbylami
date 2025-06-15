@@ -10,7 +10,6 @@ export const Works = () => {
         queryKey: ['gallery', API_KEY],
         queryFn: async () => {
             const response = await retrieveAllGalleryService(API_KEY);
-            console.log(response);
             return response;
         },
         enabled: !!API_KEY,
