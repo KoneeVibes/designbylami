@@ -17,11 +17,11 @@ export const NavigationWrapper = styled(Stack)(({ theme }) => {
     }, [setOpenMenu]);
 
     return {
-        flexDirection: "row",
+        flexDirection: "column",
         justifyContent: "space-between",
         alignItems: "center",
         padding: "calc(var(--basic-padding)/3) calc(var(--basic-padding)/2)",
-        gap: "calc(var(--flex-gap)/2)",
+        gap: "calc(var(--flex-gap)/4)",
         position: openMenu ? "fixed" : "static",
         zIndex: 1,
         left: 0,
@@ -43,7 +43,7 @@ export const NavigationWrapper = styled(Stack)(({ theme }) => {
             display: openMenu ? "flex" : "none",
             gap: "calc(var(--flex-gap)/1)",
             position: "absolute",
-            top: "8.920875rem",
+            top: "10.920875rem",
             left: "calc(var(--basic-padding) * -1)",
             right: "calc(var(--basic-padding) * -1)",
             padding: "var(--basic-padding) calc(var(--basic-padding)/2)",
@@ -64,7 +64,6 @@ export const NavigationWrapper = styled(Stack)(({ theme }) => {
             textDecoration: "none",
         },
         [theme.breakpoints.up("tablet")]: {
-            gap: "var(--flex-gap)",
             padding: "calc(var(--basic-padding)/3) calc(var(--basic-padding))",
             "& .nav-links": {
                 gap: "calc(var(--flex-gap)/2)",
@@ -76,6 +75,8 @@ export const NavigationWrapper = styled(Stack)(({ theme }) => {
             },
         },
         [theme.breakpoints.up("desktop")]: {
+            flexDirection: "row",
+            gap: "var(--flex-gap)",
             "& .favicon-box": {
                 padding: "0",
             },

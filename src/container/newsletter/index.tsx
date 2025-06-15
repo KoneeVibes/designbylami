@@ -26,12 +26,13 @@ export const Newsletter: React.FC<NewsletterPropsType> = ({ top }) => {
                         textAlign={"center"}
                         whiteSpace={"normal"}
                     >
-                        Get Promo Code by Subscribing To our  Newsletter
+                        Get Promo Code by Subscribing To our Newsletter
                     </Typography>
                 </Box>
                 <Stack
                     component={"form"}
-                    direction={"row"}
+                    direction={{ tablet: "row" }}
+                    gap={{ mobile: "calc(var(--flex-gap)/4)", tablet: 0 }}
                     bgcolor={"var(--light-color)"}
                     borderRadius={"20px"}
                     padding={"calc(var(--basic-padding)/6)"}
@@ -47,6 +48,7 @@ export const Newsletter: React.FC<NewsletterPropsType> = ({ top }) => {
                             required
                             fullWidth
                             placeholder="Enter your email"
+                            className="newsletter-input-field"
                         />
                     </Box>
                     <Box

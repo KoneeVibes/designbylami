@@ -20,7 +20,7 @@ export const Navigation = () => {
 
     const handleContactUsClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.stopPropagation();
-        return window.location.href = "mailto:info@blocedge.com";
+        return window.location.href = "mailto:designsbylami@gmail.com";
     }
 
     useEffect(() => {

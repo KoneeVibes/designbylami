@@ -17,7 +17,7 @@ export const Home = () => {
                     headerBg={homeheaderbg}
                     minHeight={"400px"}
                     headerText="We bring the WOW to your party!"
-                    headerBody="With DBE Designs party planning your event will definitely be the talk of the town & your guests will be WOWed!"
+                    headerBody="With Designs by Lami, your event won’t just happen — it will wow!"
                     callToAction={true}
                 />
                 <StartPlanning />

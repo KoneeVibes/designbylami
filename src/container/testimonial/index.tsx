@@ -44,14 +44,14 @@ export const Testimonial = () => {
                         textAlign={{ tablet: "center" }}
                         marginBlockEnd={{ mobile: "calc(var(--basic-margin)/3)", tablet: "calc(var(--basic-margin)/2)" }}
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        See what our clients are saying about their unforgettable experiences with us
                     </Typography>
                 </Box>
                 <Box
                     className="carousel-box"
                 >
                     <Carousel
-                        autoPlay={true}
+                        // autoPlay={true}
                         autoFocus={true}
                         infiniteLoop={true}
                         interval={2000}

@@ -43,7 +43,7 @@ export const socialMedia = [
     {
         icon: <InstagramIcon />,
         name: "Instagram",
-        url: ""
+        url: "https://www.instagram.com/designsbylami/"
     },
     {
         icon: <FacebookIcon />,
@@ -54,11 +54,7 @@ export const socialMedia = [
 
 export const footerDocuments = [
     {
-        name: "Terms of Reference",
-        url: ""
-    },
-    {
-        name: "Privacy Policy",
+        name: "Designed by Sparklabs",
         url: ""
     },
 ];

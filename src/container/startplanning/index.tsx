@@ -54,7 +54,7 @@ export const StartPlanning = () => {
                         whiteSpace={"normal"}
                         textAlign={{ tablet: "center" }}
                     >
-                        Let’s start planning a day you’ll Always remember
+                        Let’s start planning a day you’ll always remember
                     </Typography>
                 </Box>
                 <Box>
@@ -68,7 +68,7 @@ export const StartPlanning = () => {
                         whiteSpace={"normal"}
                         textAlign={{ tablet: "center" }}
                     >
-                        Create unforgettable experiences with our personalized planning services. Let's start planning a day you'll always remember with tailored activities, unique adventures, and cherished moments. From romantic getaways to fun outings with friends and family, we'll help you craft a day that's truly special."
+                        Create unforgettable experiences with our personalized planning services. Let's start planning a day you'll always remember with tailored activities, unique adventures, and cherished moments. From romantic getaways to fun outings with friends and family, we'll help you craft a day that's truly special.
                     </Typography>
                 </Box>
             </Stack>

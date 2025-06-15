@@ -20,11 +20,21 @@ export const NewsletterWrapper = styled(Stack)(({ theme }) => {
             flex: 1,
             overflow: "hidden",
         },
+        "& .newsletter-input-field": {
+            "& .MuiInputBase-input": {
+                textAlign: "center"
+            }
+        },
         [theme.breakpoints.up("tablet")]: {
             position: "absolute",
             left: "calc(var(--basic-padding))",
             right: "calc(var(--basic-padding))",
             padding: "calc(var(--basic-padding) * 2) calc(var(--basic-padding))",
+            "& .newsletter-input-field": {
+                "& .MuiInputBase-input": {
+                    textAlign: "left"
+                }
+            },
         }
     }
 })

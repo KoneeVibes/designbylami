@@ -3,7 +3,7 @@ import { Grid, styled } from "@mui/material";
 export const WorksWrapper = styled(Grid)(({ theme }) => {
     return {
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "flex-start",
         padding: "calc(var(--basic-padding)) calc(var(--basic-padding)/2)",
         "& .thumbnail-box": {
             overflow: "hidden",

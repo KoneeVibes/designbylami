@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterPropsType> = ({ top }) => {
                             color={"var(--text-color)"}
                             whiteSpace={"normal"}
                         >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            From intimate moments to grand affairs, we design with heart, style, and precision.
                         </Typography>
                     </Box>
                     <Box>
@@ -187,7 +187,7 @@ export const Footer: React.FC<FooterPropsType> = ({ top }) => {
                         color={"var(--text-color)"}
                         whiteSpace={"normal"}
                     >
-                        &copy; 2022 Restaurants. All Right Reserved. Designed by Sparklabs
+                        &copy; {new Date().getFullYear()} Designs by Lami. All Rights Reserved.
                     </Typography>
                 </Box>
                 <Stack

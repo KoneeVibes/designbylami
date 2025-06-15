@@ -20,7 +20,7 @@ export const TestimonialWrapper = styled(Stack)(({ theme }) => {
             },
         },
         "& .review-card": {
-            padding: "var(--basic-padding)",
+            padding: "var(--basic-padding) calc(var(--basic-padding)/4) calc(var(--basic-padding)/4)",
             backgroundColor: "var(--light-color)",
             height: "100%",
             borderRadius: "70px 30px 70px 30px",
@@ -41,6 +41,9 @@ export const TestimonialWrapper = styled(Stack)(({ theme }) => {
         [theme.breakpoints.up("tablet")]: {
             overflow: "unset",
             padding: "calc(var(--basic-padding) * 2) 0",
+            "& .review-card": {
+                padding: "var(--basic-padding)",
+            },
             "& .control-dots": {
                 bottom: "-74px",
             },
