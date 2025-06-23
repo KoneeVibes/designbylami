@@ -10,8 +10,8 @@ export const navLinks = [
         url: "/"
     },
     {
-        name: "Work",
-        url: "/work"
+        name: "Gallery",
+        url: "/gallery"
     },
     {
         name: "Contact Us",

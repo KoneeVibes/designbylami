@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { NavigationWrapper } from "./styled";
-import logo from "../../asset/logo.png";
+import logo from "../../asset/logo.svg";
 import { useNavigate } from "react-router-dom";
 import { navLinks } from "../../config/static";
 import { BaseButton } from "../../component/button/styled";
@@ -18,9 +18,9 @@ export const Navigation = () => {
         navigate("/");
     };
 
-    const handleContactUsClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const handleMakeAnInquiryClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.stopPropagation();
-        return window.location.href = "mailto:designsbylami@gmail.com";
+        return window.open("https://docs.google.com/forms/d/1iw5wMagDzFtM1cCL27zl-8Fdb0vNBq0O_JXRh7S824U/edit?pli=1", "_blank");
     }
 
     useEffect(() => {
@@ -78,7 +78,7 @@ export const Navigation = () => {
             >
                 <BaseButton
                     variant="contained"
-                    onClick={handleContactUsClick}
+                    onClick={handleMakeAnInquiryClick}
                 >
                     <Typography
                         variant={"button"}
@@ -89,7 +89,7 @@ export const Navigation = () => {
                         color={"inherit"}
                         textTransform={"inherit"}
                     >
-                        Email Us
+                        Make an inquiry
                     </Typography>
                 </BaseButton>
             </Box>

@@ -3,21 +3,21 @@ import { AppLayout } from "../../container/layout";
 import { WorkBodyWrapper } from "./styled";
 import workheaderbg from "../../asset/work-header-bg.png";
 import { Works } from "../../container/works";
-import { ContactBox } from "../../container/contactbox";
+// import { ContactBox } from "../../container/contactbox";
 
 export const Work = () => {
     return (
         <AppLayout
-            location="work"
+            location="gallery"
         >
             <WorkBodyWrapper>
                 <Header
                     headerBg={workheaderbg}
                     minHeight={"200px"}
-                    headerText="See our Work"
+                    headerText="See our Gallery"
                 />
                 <Works />
-                <ContactBox />
+                {/* <ContactBox /> */}
             </WorkBodyWrapper>
         </AppLayout>
     )

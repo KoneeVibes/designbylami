@@ -3,7 +3,7 @@ import { AppLayout } from "../../container/layout";
 import { HomeBodyWrapper } from "./styled";
 import homeheaderbg from "../../asset/home-header-bg.png";
 import { StartPlanning } from "../../container/startplanning";
-import { Clients } from "../../container/clients";
+// import { Clients } from "../../container/clients";
 import { RecentWorks } from "../../container/recentworks";
 import { Testimonial } from "../../container/testimonial";
 
@@ -21,7 +21,7 @@ export const Home = () => {
                     callToAction={true}
                 />
                 <StartPlanning />
-                <Clients />
+                {/* <Clients /> */}
                 <RecentWorks />
                 <Testimonial />
             </HomeBodyWrapper>

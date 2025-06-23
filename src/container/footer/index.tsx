@@ -1,6 +1,6 @@
 import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
 import { FooterWrapper } from "./styled";
-import logo from "../../asset/logo.png";
+import logo from "../../asset/logo.svg";
 import { openingHours, navLinks, socialMedia, footerDocuments } from "../../config/static";
 import { HashLink } from "react-router-hash-link";
 import { FooterPropsType } from "../../type/container.type";

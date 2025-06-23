@@ -11,6 +11,11 @@ export const Header: React.FC<HeaderPropsType> = ({
     const navigate = useNavigate();
     const matches = useMediaQuery('(min-width:220px)');
 
+    const handleContactUsClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.stopPropagation();
+        return window.location.href = "mailto:designsbylami@gmail.com";
+    }
+
     return (
         <HeaderWrapper
             minHeight={minHeight}
@@ -67,9 +72,7 @@ export const Header: React.FC<HeaderPropsType> = ({
                                 bgcolor="var(--light-color)"
                                 colour="var(--dark-color)"
                                 sx={{ minWidth: matches ? "210px" : "0px" }}
-                                onClick={() => {
-                                    // window.open("https://calendly.com/your-link", "_blank");
-                                }}
+                                onClick={handleContactUsClick}
                             >
                                 <Typography
                                     variant={"button"}
@@ -80,7 +83,7 @@ export const Header: React.FC<HeaderPropsType> = ({
                                     color={"inherit"}
                                     textTransform={"inherit"}
                                 >
-                                    Book A Session
+                                    Email Us
                                 </Typography>
                             </BaseButton>
                         </Box>
@@ -91,7 +94,7 @@ export const Header: React.FC<HeaderPropsType> = ({
                             <BaseButton
                                 variant={"contained"}
                                 sx={{ minWidth: matches ? "210px" : "0px" }}
-                                onClick={() => navigate("/work")}
+                                onClick={() => navigate("/gallery")}
                             >
                                 <Typography
                                     variant={"button"}
@@ -102,7 +105,7 @@ export const Header: React.FC<HeaderPropsType> = ({
                                     color={"inherit"}
                                     textTransform={"inherit"}
                                 >
-                                    View Our Projects
+                                    View Our Gallery
                                 </Typography>
                             </BaseButton>
                         </Box>

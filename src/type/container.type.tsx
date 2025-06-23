@@ -4,7 +4,7 @@ export type MainAreaPropsType = {
 
 export type AppLayoutPropsType = {
     children: React.ReactNode,
-    location: "home" | "work"
+    location: "home" | "gallery"
 }
 
 export type HeaderWrapperPropsType = {

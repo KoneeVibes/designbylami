@@ -38,7 +38,7 @@ export const RecentWorks = () => {
                     textAlign={{ tablet: "center" }}
                     marginBlockEnd={{ mobile: "calc(var(--basic-margin)/3)", tablet: "calc(var(--basic-margin)/2)" }}
                 >
-                    Our Recent Works
+                    Our Recent Projects
                 </Typography>
             </Box>
             <Grid
@@ -77,7 +77,7 @@ export const RecentWorks = () => {
                     padding="calc(var(--basic-padding)/4) 0"
                     sx={{ float: { tablet: "right" } }}
                     endIcon={<Arrow />}
-                    onClick={() => navigate("/work")}
+                    onClick={() => navigate("/gallery")}
                 >
                     <Typography
                         variant={"button"}

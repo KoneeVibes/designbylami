@@ -2,7 +2,7 @@ import { Stack, styled } from "@mui/material";
 
 export const StartPlanningWrapper = styled(Stack)(({ theme }) => {
     return {
-        padding: "calc(var(--basic-padding) * 2) 0",
+        padding: "calc(var(--basic-padding) * 2) 0 0 0",
         flexDirection: "row",
         "& .image-box": {
             flex: 0.2,
@@ -14,7 +14,7 @@ export const StartPlanningWrapper = styled(Stack)(({ theme }) => {
             }
         },
         [theme.breakpoints.down("tablet")]: {
-            padding: "calc(var(--basic-padding)) 0",
+            padding: "calc(var(--basic-padding)) 0 0 0",
             "& .image-box": {
                 display: "none"
             },

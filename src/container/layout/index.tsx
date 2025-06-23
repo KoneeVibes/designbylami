@@ -12,7 +12,7 @@ export const AppLayout: React.FC<AppLayoutPropsType> = ({ children, location }) 
                 {children}
             </MainArea>
             <Footer
-                top={location === "home" ? "calc(var(--basic-margin) * 6)" : "calc(var(--basic-margin) * 4)"}
+                // top={location === "home" ? "calc(var(--basic-margin) * 6)" : "calc(var(--basic-margin) * 4)"}
             />
         </AppLayoutWrapper>
     )

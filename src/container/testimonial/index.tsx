@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardMedia, Stack, Typography, useMediaQuery } from "@mui/material";
-import { Newsletter } from "../newsletter";
+// import { Newsletter } from "../newsletter";
 import { TestimonialWrapper } from "./styled";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -51,7 +51,7 @@ export const Testimonial = () => {
                     className="carousel-box"
                 >
                     <Carousel
-                        // autoPlay={true}
+                        autoPlay={true}
                         autoFocus={true}
                         infiniteLoop={true}
                         interval={2000}
@@ -168,13 +168,13 @@ export const Testimonial = () => {
                     </Carousel>
                 </Box>
             </Stack>
-            <Box
+            {/* <Box
                 padding={{ mobile: "0 calc(var(--basic-padding)/2)", tablet: "0 calc(var(--basic-padding))" }}
             >
                 <Newsletter
                     top="unset"
                 />
-            </Box>
+            </Box> */}
         </TestimonialWrapper >
     )
 }
