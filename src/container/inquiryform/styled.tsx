@@ -2,8 +2,8 @@ import { Stack, styled } from "@mui/material";
 
 export const InquiryFormWrapper = styled(Stack)(({ theme }) => {
     return {
-        gap: "var(--flex-gap)",
-        padding: "0 var(--basic-padding) var(--basic-padding)",
+        gap: "calc(var(--flex-gap)/2)",
+        padding: "0 calc(var(--basic-padding)/2) calc(var(--basic-padding)/2)",
         "& fieldset": {
             display: "flex",
             flexDirection: "column",
@@ -18,5 +18,9 @@ export const InquiryFormWrapper = styled(Stack)(({ theme }) => {
                 borderBottom: "1px solid var(--input-field-border-color)"
             }
         },
+        [theme.breakpoints.up("tablet")]: {
+            gap: "var(--flex-gap)",
+            padding: "0 var(--basic-padding) var(--basic-padding)",
+        }
     }
 })

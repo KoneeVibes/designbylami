@@ -22,7 +22,7 @@ export const BaseFormModal = forwardRef<HTMLFormElement, FormModalPropsType>(
                     alignItems={"center"}
                     gap={"calc(var(--flex-gap)/4)"}
                     justifyContent={"space-between"}
-                    padding={"var(--basic-padding)"}
+                    padding={{ mobile: "calc(var(--basic-padding)/2)", tablet: "var(--basic-padding)" }}
                     borderBottom={"2px solid var(--form-header-border)"}
                 >
                     <Box

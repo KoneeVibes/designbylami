@@ -318,7 +318,7 @@ export const InquiryForm: React.FC<InquiryFormPropsType> = ({ setIsAlertModalOpe
         >
             <InquiryFormWrapper>
                 <Box
-                    marginBlockStart={"var(--flex-gap)"}
+                    marginBlockStart={{ mobile: "calc(var(--flex-gap)/2)", tablet: "var(--flex-gap)" }}
                 >
                     <Typography
                         variant="body1"
@@ -335,7 +335,7 @@ export const InquiryForm: React.FC<InquiryFormPropsType> = ({ setIsAlertModalOpe
                 <Grid
                     container
                     component={"div"}
-                    spacing={"var(--flex-gap)"}
+                    spacing={{ mobile: "calc(var(--flex-gap)/2)", tablet: "var(--flex-gap)" }}
                     className="fieldset-grid-wrapper"
                 >
                     <Grid
@@ -392,7 +392,7 @@ export const InquiryForm: React.FC<InquiryFormPropsType> = ({ setIsAlertModalOpe
                     {formDetails.schedule.map((schedule, outerIndex) => (
                         <Stack
                             key={outerIndex}
-                            gap={"var(--flex-gap)"}
+                            gap={{ mobile: "calc(var(--flex-gap)/2)", tablet: "var(--flex-gap)" }}
                             width={"-webkit-fill-available"}
                             paddingTop={"var(--basic-padding)"}
                             borderTop={"2px solid var(--form-header-border)"}
