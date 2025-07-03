@@ -26,3 +26,7 @@ export type NewsletterPropsType = {
 export type FooterPropsType = {
     top?: string
 }
+
+export type InquiryFormPropsType = {
+    setIsAlertModalOpen: React.Dispatch<React.SetStateAction<boolean>>
+}

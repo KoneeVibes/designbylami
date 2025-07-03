@@ -96,7 +96,9 @@ export const Testimonial = () => {
                                                 gap={0.5}
                                             >
                                                 {[...Array(5)].map((_, i) => (
-                                                    <Fragment>
+                                                    <Fragment
+                                                        key={i}
+                                                    >
                                                         {i < review.stars ? (
                                                             <StarIcon
                                                                 key={i}

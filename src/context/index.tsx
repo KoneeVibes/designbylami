@@ -4,9 +4,15 @@ import { ContextProviderPropsType, ContextType } from "../type/context.type";
 export const Context = createContext({} as ContextType);
 
 export const ContextProvider: React.FC<ContextProviderPropsType> = ({ children }) => {
-    const [openMenu, setOpenMenu] = useState(false)
+    const [openMenu, setOpenMenu] = useState(false);
+    const [isInquiryFormModalOpen, setIsInquiryFormModalOpen] = useState(false);
     return (
-        <Context.Provider value={{ openMenu, setOpenMenu }}>
+        <Context.Provider value={{
+            openMenu,
+            setOpenMenu,
+            isInquiryFormModalOpen,
+            setIsInquiryFormModalOpen
+        }}>
             {children}
         </Context.Provider>
     )

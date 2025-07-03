@@ -14,6 +14,12 @@
         --text-color: #5C6574;
         --footer-header-color: #101A24;
         --contact-box-bg-color: #F3F4F4;
+        --fieldset-bg-color: #F9F9F9;
+        --input-field-border-color: #737B7D;
+        --form-legend-color: #383C3E;
+        --form-label-color: #8E8E8E;
+        --form-header-border: #E5E7EB;
+        --input-field-color: #080808;
 
         --basic-padding: 3.5rem;
         --basic-margin: 3.5rem;
@@ -23,5 +29,10 @@
 
     * {
         /* outline: 1px solid #FF0000; */
+    }
+
+    .loader {
+        width: calc(0.35 * var(--basic-padding)) !important;
+        height: auto !important;
     }
 }

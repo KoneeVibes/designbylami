@@ -6,22 +6,38 @@ import { navLinks } from "../../config/static";
 import { BaseButton } from "../../component/button/styled";
 import { HashLink } from 'react-router-hash-link';
 import { MenuButton } from "../../component/button/menu";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../../context";
+import { InquiryForm } from "../inquiryform";
+import { BaseAlertModal } from "../../component/modal/alert";
+import { AlertModalCheckIcon } from "../../asset";
 
 export const Navigation = () => {
     const navigate = useNavigate();
-    const { openMenu, setOpenMenu } = useContext(Context);
+    const { openMenu, setOpenMenu, setIsInquiryFormModalOpen } = useContext(Context);
+
+    const [isAlertModalOpen, setIsAlertModalOpen] = useState(false);
 
     const handleLogoClick = () => {
         setOpenMenu(false);
         navigate("/");
     };
 
-    const handleMakeAnInquiryClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const handleMakeAnInquiryClick = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.stopPropagation();
-        return window.open("https://docs.google.com/forms/d/1iw5wMagDzFtM1cCL27zl-8Fdb0vNBq0O_JXRh7S824U/edit?pli=1", "_blank");
-    }
+        if (openMenu) {
+            await setOpenMenu(false);
+        };
+        return setIsInquiryFormModalOpen(true);
+    };
+
+    const handleAlertModalPersist = () => {
+        return setIsAlertModalOpen(true);
+    };
+
+    const handleAlertModalCallToActionClick = () => {
+        return setIsAlertModalOpen(false);
+    };
 
     useEffect(() => {
         if (openMenu) {
@@ -98,6 +114,24 @@ export const Navigation = () => {
                 className="hamburger"
             >
                 <MenuButton />
+            </Box>
+            {/* alert modal below */}
+            <BaseAlertModal
+                open={isAlertModalOpen}
+                icon={<AlertModalCheckIcon />}
+                title="Successful"
+                message="Your inquiry has been sent successfully."
+                callToAction="Ok"
+                handleClose={handleAlertModalPersist}
+                handleCallToAction={handleAlertModalCallToActionClick}
+            />
+            {/* alert modal above */}
+            <Box
+                sx={{ position: "fixed" }}
+            >
+                <InquiryForm
+                    setIsAlertModalOpen={setIsAlertModalOpen}
+                />
             </Box>
         </NavigationWrapper>
     )
