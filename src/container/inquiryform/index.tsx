@@ -384,7 +384,7 @@ export const InquiryForm: React.FC<InquiryFormPropsType> = ({ setIsAlertModalOpe
                             <BaseInput
                                 name="phone"
                                 value={formDetails.phone}
-                                placeholder="Enter Email Address"
+                                placeholder="Enter Phone"
                                 onChange={(e) => handleChange(e)}
                             />
                         </BaseFieldSet>
